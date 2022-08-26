@@ -1,7 +1,5 @@
 # Beatbox Machine
 
-**The human-machine rhythm converter** [available here](https://beatbox-machine.magiwanders.com/main/index.html)
-
 Created by:
 
 **Enrico Zoboli & Simone Shawn Cazzaniga**  
