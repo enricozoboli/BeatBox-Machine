@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" href="data:,">
+    <link href="style-page.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEATBOX MACHINE</title>
+</head>
+
+<body>
+
+    <div id="root">
+
+        <div id="controllers-container">
+            <div id="controllers">
+
+                <div id="selectorContainer">
+                    <div id="selector">
+                        <div style="top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    position: absolute;
+    justify-content: center;
+    align-items: center;">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="canvasCont">
+                    <div class="button-container" id="button-container1">
+                        <div id="create-clock">
+                            <img id="create-clock-img" src="Components/timelapse.png"></img>
+                        </div>
+
+                        <div id="resume-ctx">
+                            <img id="resume-ctx-img" src="Components/power-button.png"></img>
+                        </div>
+                    </div>
+                    <canvas id="current-scope"></canvas>
+                    <canvas id="full-rec"></canvas>
+                    <div class="button-container" id="button-container2">
+                        <div id="play">
+                            <img id="play-img" src="Components/play-button.png"></img>
+                        </div>
+
+                        <div id="stop">
+                            <img id="stop-img" src="Components/stop.png"></img>
+                        </div>
+
+                    </div>
+                    <div id="millsec"></div>
+                </div>
+
+                <div class="tempo-info">
+                    <span id="next"></span>
+                    <span id="prev"></span>
+                    <div id="box">
+                        <span id="bpm-value"></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div id="rythmyc-view-container">
+            <div id="rythmyc-view">
+            </div>
+        </div>
+        <p id='sectionIndex' style='visibility: hidden;'></p>
+        <p id='clockIndex' style='visibility: hidden;'></p>
+
+
+    </div>
+
+    <!--<canvas id="current-scope" width=500 height=260 style="
+            background-color: #f5f5dc;
+            border: 3px solid;">
+            </canvas>
+
+    <canvas id="full-rec" width=500 height=260 style="
+            background-color: beige;
+            border: 3px solid;">
+            </canvas>
+        -->
+
+    <!--
+    <div id="container">
+        <input type="number" id="divisions" value="8"> Divisions <button id="simpleRender">Render</button>
+        <br>
+        <button id="addLayerBtn">Add a layer</button>
+        <br> Layers are indexed from 0 (the innermost)
+        <br><input type="number" id="layer" value="0"> Layer to modify
+        <br><input type="number" id="eqN" value="0"><button id="renderEqN">Apply</button>
+        <=n umber of equally spaced dots <br> OR
+            <br><input type="text" id="deg"> <button id="renderDeg">Apply</button>
+            <=c omma separated positions (in degrees, starting from zero on the top, clockwise. The angle must be exact.) <br><button id="play">Play</button><button id="pause">Pause</button><button id="stop">Stop</button>
+    </div>
+
+-->
+
+    <script src="Server/Fetch.js"></script>
+
+    <script src="Components/Microphone.js"></script>
+    <script src="Components/Timer.js"></script>
+    <script src="Components/Addbutton.js"></script>
+    <script src="Components/WaitRec.js"></script>
+    <script src="Components/Section.js"></script>
+
+    <script src="Sound/Sound.js"></script>
+
+    <script src="Clock/Bpm.js"></script>
+    <script src="Clock/Default.js"></script>
+    <script src="Clock/GridOfDots.js"></script>
+    <script src="Clock/Clock.js"></script>
+
+    <script src="MVC/Model.js"></script>
+    <script src="MVC/View.js"></script>
+    <script src="MVC/Controller.js"></script>
+
+    <!--<script src="main-script.js"></script>-->
+
+</body>
+
+
+</html>

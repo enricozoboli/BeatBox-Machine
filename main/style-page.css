@@ -1,0 +1,419 @@
+body {
+    margin: 0 auto;
+    background-color: #f8f1f1
+}
+
+#root {
+    margin: 0 auto;
+    padding: 0%;
+}
+
+#controllers-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+#controllers {
+    height: 300px;
+    width: 1265px;
+    position: relative;
+}
+
+#rythmyc-view-container {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#rythmyc-view {
+    height: 925px;
+    width: 1265px;
+    position: relative;
+}
+
+#section {
+    display: inline-block;
+    position: absolute;
+    width: 304px;
+    height: 950px;
+    border: 2px solid #d99257;
+    margin: 5px;
+    background-color: #ffd295;
+    ;
+}
+
+#selector {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(50%);
+    font-size: revert;
+    font-family: sans-serif;
+    cursor: pointer;
+    user-select: none;
+}
+
+#bpm-value {
+    margin: 0 auto;
+    position: relative;
+    font-size: 24px;
+    font-weight: 700;
+    font: icon;
+}
+
+.tempo-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+    /*left: 80%;
+    top: 25px;*/
+    border-radius: 20px;
+    border: 2px solid black;
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.tempo-info:hover {
+    width: 120px;
+}
+
+.tempo-info #next {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    z-index: 1;
+    transform: translateY(-50%) rotate(135deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.tempo-info:hover #next {
+    opacity: 1;
+    right: 20px;
+}
+
+.tempo-info #prev {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    z-index: 1;
+    transform: translateY(-50%) rotate(315deg);
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.tempo-info:hover #prev {
+    opacity: 1;
+    right: 20px;
+}
+
+.top-button-container {
+    position: absolute;
+    display: inline-block;
+    width: 250px;
+    height: 60px;
+    top: 5px;
+    left: 40%;
+    border: 2px solid black;
+    margin: 0 auto;
+}
+
+#play {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    height: 50px;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+}
+
+#play-img {
+    width: 50px;
+    position: relative;
+    /*left: 1225px;
+    top: 175px;*/
+    transition: 0.5s;
+    border-radius: 50%;
+}
+
+#play-img:hover {
+    background-color: rgb(32, 155, 32);
+}
+
+#stop {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    height: 50px;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+#stop-img {
+    width: 50px;
+    position: relative;
+    /*left: 1100px;
+    top: 175px;*/
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+#stop-img:hover {
+    opacity: 1;
+    background-color: rgb(245, 28, 28);
+}
+
+#create-clock {
+    display: inline-block;
+    position: absolute;
+    margin: auto;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#create-clock-img {
+    position: absolute;
+    width: 50px;
+    /*left: 400px;
+    top: 175px;*/
+    transition: 0.5s;
+}
+
+#create-clock-img:hover {
+    width: 50px;
+    position: relative;
+    /*left: 400px;
+    top: 175px;*/
+    transform: rotate(90deg);
+}
+
+#resume-ctx {
+    position: absolute;
+    display: inline-block;
+    margin: auto;
+    height: 20px;
+    right: 0px;
+}
+
+#resume-ctx-img {
+    width: 20px;
+    position: relative;
+    /*left: 420px;
+    top: 175px;*/
+    transition: 0.5s;
+}
+
+#rec {
+    position: absolute;
+    background-color: red;
+    display: block;
+    left: 20%;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: 15%;
+}
+
+.clock {
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #808080;
+}
+
+.hand {
+    background-color: #000;
+    position: absolute;
+    transform: translateX(-50%) rotate(0deg);
+    transform-origin: bottom;
+    transition: 0s;
+}
+
+.dot {
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.tigran-chopin-button {
+    background-color: black;
+    border-radius: 50%;
+    position: relative;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.add-clock {
+    background-color: teal;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#canvasCont {
+    position: absolute;
+    width: 755px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.button-container {
+    position: relative;
+    display: inline-block;
+    /*background-color: green;
+  top:50%;
+  left:25%;
+  transform: translateY(-50%);*/
+    width: 100px;
+    height: 150px;
+    left: 5px;
+}
+
+#millsec {
+    left: 120px;
+    bottom: 5px;
+    width: 100px;
+    position: absolute;
+}
+
+#button-container2 {
+    width: 150px;
+}
+
+#selectorContainer {
+    /*width: 200px;
+    height: 100%;*/
+    left: 1%;
+    top: 20%;
+    position: absolute;
+}
+
+#current-scope {
+    position: relative;
+    display: inline-block;
+    background-color: rgb(134, 134, 134);
+    border: 2px solid black;
+    width: 230px;
+    height: 146px;
+    left: 5px;
+}
+
+#full-rec {
+    background-color: rgb(134, 134, 134);
+    border: 2px solid black;
+    width: 230px;
+    height: 146px;
+    position: relative;
+    display: inline-block;
+    left: 4px;
+}
+
+#addclockcanvas {
+    position: relative;
+    margin: 0 auto;
+    top: 5px;
+    display: inline-block;
+}
+
+#addclkbutton {
+    position: relative;
+    display: inline-block;
+    height: 90px;
+    top: 160px;
+}
+
+#addsection {
+    /*display: inline-block;*/
+    margin: auto;
+    height: 0px;
+}
+
+#waitreccanvas {
+    position: absolute;
+}
+
+#waitrec {
+    display: inline-block;
+    position: absolute;
+    height: 140px;
+    width: 300px;
+}
+
+#addsectioncanvas {
+    position: absolute;
+    display: inline-block;
+}
+
+.rem-btn {
+    position: relative;
+    background-color: black;
+    border-radius: 50%;
+}
+
+#addbuttonimg {
+    width: 50px;
+    position: relative;
+    left: 245px;
+    top: 5px;
+    transition: 0.5s;
+}
+
+#addbuttonimg:hover {
+    width: 50px;
+    position: relative;
+    left: 245px;
+    top: 5px;
+    transform: rotate(90deg);
+}
+
+.rem-button-container {
+    height: 5px;
+}
+
+#rem-clock-img {
+    width: 40px;
+    top: 5px;
+    position: relative;
+    left: 15px;
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+#rem-clock-img:hover {
+    transform: rotate(90deg);
+    background-color: red;
+    border-radius: 50%;
+}
